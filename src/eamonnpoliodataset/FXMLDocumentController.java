@@ -28,7 +28,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void handleButtonAction(ActionEvent event) {
         System.out.println("You clicked me!");
-        label.setText("Hello World!");
+        
     }
     
     @Override
@@ -67,9 +67,11 @@ public class FXMLDocumentController implements Initializable {
          countriesImmunized.setName("% Countries Immunized");
          
         for (DataPoint datapt : ds.getFact()) {
-            String percent = datapt.getValue();
+            int percent = datapt.getValue();
             String country = datapt.country();
-            countriesImmunized.getData().add(new XYChart.Data(country, percent));
+            if(country != null) {
+                countriesImmunized.getData().add(new XYChart.Data(country, percent));
+            }
         }
         
         barChart.getData().add(countriesImmunized);

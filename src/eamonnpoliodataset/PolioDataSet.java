@@ -22,7 +22,7 @@ public class PolioDataSet {
         System.out.println("Polio Immunizations in 1980");
         for(int i = 0; i < fact.length; i++) {
             System.out.println(fact[i].toString());
-            output = fact[i].getValue();
+            output = "" + fact[i].getValue();
         }
         return output;
     }

@@ -5,7 +5,7 @@
  */
 package eamonnpoliodataset;
 
-import eamonn.s.dataset.DataPointInfo;
+
 
 /**
  *
@@ -13,8 +13,8 @@ import eamonn.s.dataset.DataPointInfo;
  */
 public class DataPoint {
     private DataPointInfo dim;
-    private String Value;
-    public String getValue() {
+    private int Value;
+    public int getValue() {
         return this.Value;
     }
     
